@@ -18,6 +18,7 @@
   "homepage": "https://github.com/MusayyibKsloves/first_node_js#readme",
   "dependencies": {
     "chalk": "^4.1.2",
+    "express": "^4.18.2",
     "nodemon": "^3.0.1",
     "simple-node-logger": "^21.8.12"
   }

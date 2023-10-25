@@ -42,7 +42,7 @@ http.createServer((req,resp)=>{
     resp.writeHead(200,{'Content-Type':'applicatio\json'});
     resp.write(JSON.stringify(data))
     resp.end();
-}).listen(4500);
+}).listen(4600);
 
 
 
@@ -69,12 +69,13 @@ const path=require('path');
 const dirPath=path.join(__dirname,'firstdir');
 console.warn(chalk.blue(dirPath));
 
-// for(let i=0;i<3;i++){
-//     fs.writeFileSync(dirPath+`/file${i}.txt`,'create custom file using fs module');
-// }
+for(let i=0;i<3;i++){
+    fs.writeFileSync(dirPath+`/file${i}.txt`,'create custom file using fs module');
+}
 
 //-----------------------remove multiple file---------------------
 
-for(let i=0;i<3;i++){
-    fs.unlinkSync(dirPath+`/file${i}.txt`);
-}
+// for(let i=0;i<3;i++){
+//     fs.unlinkSync(dirPath+`/file${i}.txt`);
+// }
+
