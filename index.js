@@ -11,6 +11,22 @@ const fs=require('fs');
 // }).listen(4500);
 
 
+// const app = require('express')();
+// const http = require('http').Server(app);
+
+// http.listen(3100,function(){
+//     console.log('Server running !');
+// })
+
+
+// const express = require('express');
+// const app = express();
+
+// app.listen(3000, function () {
+//     console.log('Server running !');
+// });
+
+
 fs.writeFileSync('file.txt','first txt file');
 
 //-------------------------local module-------------------
@@ -38,10 +54,10 @@ console.log(chalk.bold.bgRed.italic("use of chalk package"));
 //--------------------------create simple API-----------------
 const data=require('./simpleApi')
 
-http.createServer((req,resp)=>{
-    resp.writeHead(200,{'Content-Type':'applicatio\json'});
-    resp.write(JSON.stringify(data))
-    resp.end();
+http.createServer((req,res)=>{
+    res.writeHead(200,{'Content-Type':'applicatio\json'});
+    res.write(JSON.stringify(data))
+    res.end();
 }).listen(4600);
 
 
@@ -78,4 +94,6 @@ for(let i=0;i<3;i++){
 // for(let i=0;i<3;i++){
 //     fs.unlinkSync(dirPath+`/file${i}.txt`);
 // }
+
+
 
