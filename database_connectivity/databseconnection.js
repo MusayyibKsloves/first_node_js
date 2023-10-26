@@ -18,6 +18,8 @@
 const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
+app.use(express.json());
+
 
 const url = "mongodb+srv://mgdb:root@cluster0.hk5an6a.mongodb.net/?retryWrites=true&w=majority";
 
@@ -27,17 +29,17 @@ mongoose.connect(url)
 const User = require('./userModel');
 app.use('/users', require('../userApi/user'));
 
- 
+
 async function insertData() {
 
-      User.create({
+    User.create({
         name: 'musa',
         mobile: '1234567890',
         email: 'musa123@gmail.com',
         address: 'mzn'
-      });
+    });
 
-      console.log('data created in the user table');
+    console.log('data created in the user table');
 }
 
 //insertData();

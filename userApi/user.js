@@ -20,6 +20,9 @@ router.route('/')
             
         });
     })
+    .delete((req, res) => {
+        res.json({ "id": req.body.id })
+    });
 
 
 module.exports = router;
